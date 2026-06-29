@@ -1,191 +1,182 @@
-## Related projects
-### CVM runtime (AI container)
-https://github.com/CortexFoundation/cvm-runtime
-### File storage
-Stop your cortex full node daemon, when you do this test
+<div align="center">
 
-https://github.com/CortexFoundation/torrentfs
-```
-git clone https://github.com/CortexFoundation/torrentfs.git
-cd torrentfs
-make
-./build/bin/torrent download 'infohash:6b75cc1354495ec763a6b295ee407ea864a0c292'
-./build/bin/torrent download 'infohash:b2f5b0036877be22c6101bdfa5f2c7927fc35ef8'
-./build/bin/torrent download 'infohash:5a49fed84aaf368cbf472cc06e42f93a93d92db5'
-./build/bin/torrent download 'infohash:1f1706fa53ce0723ba1c577418b222acbfa5a200'
-./build/bin/torrent download 'infohash:3f1f6c007e8da3e16f7c3378a20a746e70f1c2b0'
-```
-downloaded ALL the torrents !!!!!!!!!!!!!!!!!!!
+# 🧠 BlockchainAi — Cortex: AI on Blockchain (Go)
 
-##### *** Make sure you can download the file successfully
-##### *** Accept in/out traffic of fw settings as possible for stable and fast downloading speed
-##### (40401 40404 5008 both in and out(tcp udp) traffic accepted at least)
+### Official Golang implementation of the Cortex full node — a decentralized blockchain that runs AI/ML model inference on‑chain.
 
-### AI wrapper (Fixed API for inference and file storage)
-https://github.com/CortexFoundation/inference
-### PoW (Cortex Cuckoo cycle)
-https://github.com/CortexFoundation/solution
-### Rosseta
-https://github.com/CortexFoundation/rosetta-cortex
-### Docker
-https://github.com/CortexFoundation/docker
-### Robot
-https://github.com/CortexFoundation/robot
+<p>
+  <img src="https://img.shields.io/github/license/morpheusadam/BlockchainAi?style=for-the-badge&color=4c1" alt="License" />
+  <img src="https://img.shields.io/github/stars/morpheusadam/BlockchainAi?style=for-the-badge&color=ffca28" alt="Stars" />
+  <img src="https://img.shields.io/github/forks/morpheusadam/BlockchainAi?style=for-the-badge&color=42a5f5" alt="Forks" />
+  <img src="https://img.shields.io/github/last-commit/morpheusadam/BlockchainAi?style=for-the-badge&color=8e44ad" alt="Last commit" />
+  <img src="https://img.shields.io/github/repo-size/morpheusadam/BlockchainAi?style=for-the-badge&color=e67e22" alt="Repo size" />
+</p>
 
-## System Requirements
-### **** x64 support  ****
-```
-flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm invpcid_single pti ibrs ibpb stibp fsgsbase bmi1 avx2 smep bmi2 erms invpcid xsaveopt
-```
-For example
-```
-cat /proc/cpuinfo 
-```
-## Support
-```
-processor	: 0
-vendor_id	: GenuineIntel
-cpu family	: 6
-model		: 63
-model name	: Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz
-stepping	: 2
-microcode	: 0x1
-cpu MHz		: 2494.224
-cache size	: 30720 KB
-physical id	: 0
-siblings	: 2
-core id		: 0
-cpu cores	: 1
-apicid		: 0
-initial apicid	: 0
-fpu		: yes
-fpu_exception	: yes
-cpuid level	: 13
-wp		: yes
-flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm invpcid_single pti ibrs ibpb stibp fsgsbase bmi1 avx2 smep bmi2 erms invpcid xsaveopt
-bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit
-bogomips	: 4988.44
-clflush size	: 64
-cache_alignment	: 64
-address sizes	: 46 bits physical, 48 bits virtual
-```
-## Not Support
-``` 
-Architecture:        x86_64
-CPU op-mode(s):      32-bit, 64-bit
-Byte Order:          Little Endian
-CPU(s):              32
-On-line CPU(s) list: 0-31
-Thread(s) per core:  2
-Core(s) per socket:  16
-Socket(s):           1
-NUMA node(s):        2
-Vendor ID:           AuthenticAMD
-CPU family:          23
-Model:               1
-Model name:          AMD EPYC 7571
-Stepping:            2
-CPU MHz:             2534.021
-BogoMIPS:            4399.86
-Hypervisor vendor:   KVM
-Virtualization type: full
-L1d cache:           32K
-L1i cache:           64K
-L2 cache:            512K
-L3 cache:            8192K
-NUMA node0 CPU(s):   0-7,16-23
-NUMA node1 CPU(s):   8-15,24-31
-Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm constant_tsc rep_good nopl nonstop_tsc cpuid extd_apicid amd_dcm aperfmperf tsc_known_freq pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch topoext perfctr_core vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt sha_ni xsaveopt xsavec xgetbv1 clzero xsaveerptr arat npt nrip_save
-```
-### ubuntu
-Cortex node is developed in Ubuntu 18.04 x64 + CUDA 9.2 + NVIDIA Driver 396.37 environment, with CUDA Compute capability >= 6.1. Latest Ubuntu distributions are also compatible, but not fully tested.
-Recommend:
-- cmake 3.11.0+
- ```
-wget https://cmake.org/files/v3.11/cmake-3.11.0-rc4-Linux-x86_64.tar.gz
-tar zxvf cmake-3.11.0-rc4-Linux-x86_64.tar.gz
-sudo mv cmake-3.11.0-rc4-Linux-x86_64  /opt/cmake-3.11
-sudo ln -sf /opt/cmake-3.11/bin/*  /usr/bin/
+<p>
+  <img src="https://img.shields.io/badge/Go-1.22-00ADD8?style=for-the-badge&logo=go&logoColor=white" alt="Go" />
+  <img src="https://img.shields.io/badge/Blockchain-Cortex-3C3C3D?style=for-the-badge&logo=ethereum&logoColor=white" alt="Blockchain" />
+  <img src="https://img.shields.io/badge/AI%2FML-On--Chain%20Inference-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="AI/ML" />
+  <img src="https://img.shields.io/badge/Consensus-PoW%20Cuckoo-512BD4?style=for-the-badge&logo=bitcoinsv&logoColor=white" alt="PoW" />
+  <img src="https://img.shields.io/badge/CUDA-GPU-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="CUDA" />
+  <img src="https://img.shields.io/badge/Build-Make-A42E2B?style=for-the-badge&logo=gnu&logoColor=white" alt="Make" />
+</p>
 
-sudo apt-get install make
- ```
-- go 1.20.+
-```
-wget https://go.dev/dl/go1.20.2.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.20.2.linux-amd64.tar.gz
-echo 'export PATH="$PATH:/usr/local/go/bin"' >> ~/.bashrc
-source ~/.bashrc
-```
-- gcc/g++ 5.4+
-```
-sudo apt install gcc
-sudo apt install g++
-```
-- cuda 9.2+ (if u have gpu)
-```
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:/usr/local/cuda/lib64/stubs:$LD_LIBRARY_PATH
-export LIBRARY_PATH=/usr/local/cuda/lib64/:/usr/local/cuda/lib64/stubs:$LIBRARY_PATH
-```
-- nvidia driver 396.37+ reference: https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#major-components
-- ubuntu 18.04+
-### *centos (not recommended)
-Recommend:
-- cmake 3.11.0+
-```
-yum install cmake3
-```
-- go 1.20.+
-- gcc/g++ 5.4+ reference: https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#system-requirements
-```
-sudo yum install centos-release-scl
-sudo yum install devtoolset-7-gcc*
-scl enable devtoolset-7 bash
-which gcc
-gcc --version
-```
-- cuda 10.1+ (if u have gpu)
-```
-export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:/usr/local/cuda/lib64/stubs:$LD_LIBRARY_PATH
-export LIBRARY_PATH=/usr/local/cuda/lib64/:/usr/local/cuda/lib64/stubs:$LIBRARY_PATH
-```
-- nvidia driver 418.67+
-- centos 7.6
+<p>
+  <img src="https://skillicons.dev/icons?i=go,cmake,linux,nvidia,docker" alt="Tech" />
+</p>
 
-## Cortex Full Node
+</div>
 
-### Compile Source Code (8G+ Memory suggested)
-1. git clone --recursive https://github.com/CortexFoundation/CortexTheseus.git
-2. cd CortexTheseus
-3. make clean && make -j$(nproc)
+---
 
-### It is important to pass this check of libcvm_runtime.so
+## 📖 Overview
+
+**BlockchainAi** is the **official Golang implementation of Cortex** — a public blockchain that brings **artificial intelligence and machine‑learning inference on‑chain**. Cortex lets smart contracts call AI/ML models directly through the **Cortex Virtual Machine (CVM)**, enabling decentralized AI DApps where model execution is verifiable and reproducible across every node.
+
+The node (Go module `github.com/CortexFoundation/CortexTheseus`) implements the full Cortex protocol: networking, transaction processing, the EVM‑compatible **CVM** runtime, state storage, mining, RPC/console tooling, and a **Proof‑of‑Work** consensus based on the **Cortex Cuckoo cycle**. AI models and input data are distributed via a content‑addressed storage layer, and inference results are computed deterministically (with optional **CUDA/GPU** acceleration) so that on‑chain AI is trustless.
+
+This repository is for **blockchain engineers, AI/ML researchers, miners, and DApp developers** who want to run a Cortex full node, build AI‑powered smart contracts, or experiment with decentralized machine learning.
+
+> 🔎 **Keywords:** AI on blockchain, decentralized AI, Cortex blockchain, on‑chain machine learning, Cortex Virtual Machine (CVM), Golang blockchain node, smart contract AI inference, proof‑of‑work Cuckoo cycle, GPU mining, Web3 AI.
+
+---
+
+## ✨ Features
+
+- 🧠 **On‑chain AI/ML inference** — execute machine‑learning models directly from smart contracts via the **CVM**.
+- 🔗 **Full Cortex node** — networking (p2p), state, transactions, consensus, RPC, and console in one binary.
+- ⛏️ **Proof‑of‑Work mining** — Cortex **Cuckoo cycle** PoW with optional **CUDA/GPU** acceleration.
+- 🤖 **Deterministic CVM** — EVM‑compatible virtual machine extended for verifiable AI model execution.
+- 🗂️ **Decentralized model & data storage** — AI models/inputs distributed via content‑addressed (TorrentFS) storage.
+- 🧪 **Developer tooling** — CLIs under `cmd/` (`cortex`, `bootnode`, `abigen`, `devp2p`, `keytools`, …).
+- 🌐 **Testnet support** — run the **Bernard** testnet for development.
+- 🐧 **Cross‑platform builds** — Linux‑first (Ubuntu/CentOS), x64 with `Makefile`‑driven builds.
+
+---
+
+## 🛠️ Tech Stack
+
+| Component | Technology |
+| --- | --- |
+| Language | Go 1.22 |
+| Module | `github.com/CortexFoundation/CortexTheseus` |
+| Virtual machine | Cortex Virtual Machine (CVM), EVM‑compatible |
+| Consensus | Proof‑of‑Work (Cortex Cuckoo cycle) |
+| AI runtime | CVM runtime (`libcvm_runtime.so`), optional CUDA/GPU |
+| Storage | Content‑addressed model/data storage (TorrentFS) |
+| Build | Make, CMake, GCC/G++ |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- **Go 1.20+** (built/tested with Go 1.22)
+- **CMake 3.11.0+**, **GCC/G++ 5.4+**, **make**
+- **8 GB+ RAM** recommended for compilation
+- x64 CPU (AVX2 recommended)
+- *(Optional, for GPU mining)* **CUDA 9.2+** and a compatible **NVIDIA driver (396.37+)**
+- Linux (Ubuntu 18.04+ recommended; CentOS 7.6 supported but not recommended)
+
+### Build from source
+
+```bash
+git clone --recursive https://github.com/CortexFoundation/CortexTheseus.git
+cd CortexTheseus
+make clean && make -j$(nproc)
+```
+
+Verify the CVM runtime library links correctly:
+
+```bash
 ldd plugins/libcvm_runtime.so
 ```
-linux-vdso.so.1 =>  (0x00007ffe107fa000)
-libstdc++.so.6 => /lib64/libstdc++.so.6 (0x00007f250e6a8000)
-libm.so.6 => /lib64/libm.so.6 (0x00007f250e3a6000)
-libgomp.so.1 => /lib64/libgomp.so.1 (0x00007f250e180000)
-libgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x00007f250df6a000)
-libpthread.so.0 => /lib64/libpthread.so.0 (0x00007f250dd4e000)
-libc.so.6 => /lib64/libc.so.6 (0x00007f250d980000)
-/lib64/ld-linux-x86-64.so.2 (0x00007f250ed35000)
+
+> If it fails, run `rm -rf cvm-runtime && git submodule init && git submodule update`, then rebuild.
+
+### Run a full node
+
+```bash
+cd CortexTheseus
+export LD_LIBRARY_PATH=$PWD:$PWD/plugins:$LD_LIBRARY_PATH
+./build/bin/cortex
 ```
 
-(If failed, run ```rm -rf cvm-runtime && git submodule init && git submodule update``` and try again)
+View all available options:
 
-### Running Bash
-
-And then, run any command to start full node `cortex`:
-
-```Bash
-1. cd CortexTheseus
-2. export LD_LIBRARY_PATH=$PWD:$PWD/plugins:$LD_LIBRARY_PATH
-3. ./build/bin/cortex
-
-It is easy for you to view the help document by running ./build/bin/cortex --help
+```bash
+./build/bin/cortex --help
 ```
-### Running Testnet for developers (Bernard)
-```
+
+### Run the developer testnet (Bernard)
+
+```bash
 ./cortex --bernard
 ```
 
+---
+
+## 🔗 Related Projects
+
+| Project | Description |
+| --- | --- |
+| [cvm-runtime](https://github.com/CortexFoundation/cvm-runtime) | CVM runtime — the AI inference container |
+| [torrentfs](https://github.com/CortexFoundation/torrentfs) | Decentralized file/model storage layer |
+| [inference](https://github.com/CortexFoundation/inference) | AI wrapper — fixed API for inference & storage |
+| [solution](https://github.com/CortexFoundation/solution) | PoW — Cortex Cuckoo cycle |
+| [rosetta-cortex](https://github.com/CortexFoundation/rosetta-cortex) | Rosetta API integration |
+| [docker](https://github.com/CortexFoundation/docker) | Docker images & deployment |
+
+---
+
+## 🗂️ Project Structure
+
+```text
+BlockchainAi/
+├── cmd/            # CLIs: cortex, bootnode, abigen, devp2p, keytools, …
+├── consensus/      # Proof-of-Work consensus (Cuckoo cycle)
+├── core/           # Blockchain core, state & transaction processing
+├── ctxc/           # Cortex protocol & full-node service
+├── miner/          # Mining
+├── p2p/            # Peer-to-peer networking
+├── rpc/            # JSON-RPC layer
+├── console/        # Interactive JS console
+├── crypto/         # Cryptography primitives
+├── pow/            # Proof-of-Work
+├── params/         # Network & chain parameters
+├── genesis.json    # Genesis configuration
+├── go.mod          # Go module definition
+└── Makefile        # Build automation
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please review [`CODINGSTYLE.md`](CODINGSTYLE.md), then open an
+[issue](https://github.com/morpheusadam/BlockchainAi/issues) or submit a pull request.
+
+## 📜 License
+
+The library packages are licensed under **GNU LGPL‑3.0** (`COPYING.LESSER`); the
+command‑line binaries are licensed under **GNU GPL‑3.0** (`COPYING`). See
+[`LICENSE`](LICENSE), [`COPYING`](COPYING), and [`COPYING.LESSER`](COPYING.LESSER) for details.
+
+---
+
+<div align="center">
+
+### 👤 Author — Morpheus Adam
+
+Web developer & cheerful hacker · PHP · Laravel · Go
+
+<p>
+  <a href="https://github.com/morpheusadam"><img src="https://img.shields.io/badge/GitHub-morpheusadam-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="https://sam.zeonic.me"><img src="https://img.shields.io/badge/Website-sam.zeonic.me-4c1?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website" /></a>
+  <a href="mailto:morpheusadam95@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+</p>
+
+⭐ **If this decentralized‑AI node interests you, consider giving it a star!** ⭐
+
+</div>
