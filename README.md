@@ -180,3 +180,20 @@ Web developer & cheerful hacker · PHP · Laravel · Go
 ⭐ **If this decentralized‑AI node interests you, consider giving it a star!** ⭐
 
 </div>
+
+
+---
+
+## ⭐ Star History
+
+<a href="https://star-history.com/#morpheusadam/BlockchainAi&Date">
+  <img src="https://api.star-history.com/svg?repos=morpheusadam/BlockchainAi&type=Date" alt="BlockchainAi — Star History Chart" width="70%" />
+</a>
+
+<div align="center">
+
+### If this project helps you, please give it a ⭐
+
+A star helps other developers discover **BlockchainAi** and supports continued development.
+
+</div>
