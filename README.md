@@ -5,11 +5,11 @@
 ### Official Golang implementation of the Cortex full node — a decentralized blockchain that runs AI/ML model inference on‑chain.
 
 <p>
-  <img src="https://img.shields.io/github/license/morpheusadam/BlockchainAi?style=for-the-badge&color=4c1" alt="License" />
-  <img src="https://img.shields.io/github/stars/morpheusadam/BlockchainAi?style=for-the-badge&color=ffca28" alt="Stars" />
-  <img src="https://img.shields.io/github/forks/morpheusadam/BlockchainAi?style=for-the-badge&color=42a5f5" alt="Forks" />
-  <img src="https://img.shields.io/github/last-commit/morpheusadam/BlockchainAi?style=for-the-badge&color=8e44ad" alt="Last commit" />
-  <img src="https://img.shields.io/github/repo-size/morpheusadam/BlockchainAi?style=for-the-badge&color=e67e22" alt="Repo size" />
+  <img src="https://img.shields.io/github/license/morpheusadam/CortexNode?style=for-the-badge&color=4c1" alt="License" />
+  <img src="https://img.shields.io/github/stars/morpheusadam/CortexNode?style=for-the-badge&color=ffca28" alt="Stars" />
+  <img src="https://img.shields.io/github/forks/morpheusadam/CortexNode?style=for-the-badge&color=42a5f5" alt="Forks" />
+  <img src="https://img.shields.io/github/last-commit/morpheusadam/CortexNode?style=for-the-badge&color=8e44ad" alt="Last commit" />
+  <img src="https://img.shields.io/github/repo-size/morpheusadam/CortexNode?style=for-the-badge&color=e67e22" alt="Repo size" />
 </p>
 
 <p>
@@ -155,7 +155,7 @@ BlockchainAi/
 ## 🤝 Contributing
 
 Contributions are welcome! Please review [`CODINGSTYLE.md`](CODINGSTYLE.md), then open an
-[issue](https://github.com/morpheusadam/BlockchainAi/issues) or submit a pull request.
+[issue](https://github.com/morpheusadam/CortexNode/issues) or submit a pull request.
 
 ## 📜 License
 
@@ -186,8 +186,8 @@ Web developer & cheerful hacker · PHP · Laravel · Go
 
 ## ⭐ Star History
 
-<a href="https://star-history.com/#morpheusadam/BlockchainAi&Date">
-  <img src="https://api.star-history.com/svg?repos=morpheusadam/BlockchainAi&type=Date" alt="BlockchainAi — Star History Chart" width="70%" />
+<a href="https://star-history.com/#morpheusadam/CortexNode&Date">
+  <img src="https://api.star-history.com/svg?repos=morpheusadam/CortexNode&type=Date" alt="BlockchainAi — Star History Chart" width="70%" />
 </a>
 
 <div align="center">
