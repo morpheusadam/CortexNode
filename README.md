@@ -1,7 +1,5 @@
 <div align="center">
-
-# 🧠 BlockchainAi — Cortex: AI on Blockchain (Go)
-
+# 🧠 Cortex Node — Cortex: AI on Blockchain (Go)
 ### Official Golang implementation of the Cortex full node — a decentralized blockchain that runs AI/ML model inference on‑chain.
 
 <p>
